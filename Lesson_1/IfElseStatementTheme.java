@@ -61,16 +61,16 @@ public class IfElseStatementTheme {
 
         // 4. Поиск одинаковых цифр в числах
         System.out.println("4. Поиск одинаковых цифр в числах");
-        int a = 123;
-        int b = 323;
-        if (a / 10 / 10 % 10 == b / 10 / 10 % 10) {
-            System.out.println(a / 10 / 10 % 10);
+        int x = 123;
+        int y = 323;
+        if (x / 10 / 10 % 10 == y / 10 / 10 % 10) {
+            System.out.println(x / 10 / 10 % 10);
         }
-        if (a / 10 % 10 == b / 10 % 10) {
-            System.out.println(a / 10 % 10);
+        if (x / 10 % 10 == y / 10 % 10) {
+            System.out.println(x / 10 % 10);
         }
-        if (a % 10 == b % 10) {
-            System.out.println(a % 10);
+        if (x % 10 == y % 10) {
+            System.out.println(x % 10);
         }
         System.out.println();
 
@@ -152,6 +152,55 @@ public class IfElseStatementTheme {
         }
         System.out.println();
 
+        // 9. Определение существования треугольника
+        System.out.println("9. Определение существования треугольника");
+        // Фигуры "треугольник" и "прямоугольный треугольник" имеют разные условия существования, у прямогольного они более жесткие (соответствие теореме Пифагора)
+        // Судя по тексту задачи, речь идет о определении существования именно прямогоугольного треугольника, хотя и в тексте задачи это явно не отражено
+        int a = 3;
+        int b = 4;
+        int c = 5;
+        int hypotenuse;
+        int cathetus1;
+        int cathetus2;
+        if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
+            if (a * a == b * b + c * c) {
+                hypotenuse = a;
+                cathetus1 = b;
+                cathetus2 = c;
+            } else if (b * b == a * a + c * c) {
+                hypotenuse = b;
+                cathetus1 = a;
+                cathetus2 = c;
+            } else {
+                hypotenuse = c;
+                cathetus1 = a;
+                cathetus2 = b;
+            }
+            int area = (cathetus1 * cathetus2) / 2;
+            System.out.println("Гипотенуза: " + hypotenuse);
+            System.out.println("Катет №1: " + cathetus1);
+            System.out.println("Катет №2: " + cathetus2);
+            System.out.println("Площаль: " + area);
+            System.out.println("|\\");
+            System.out.println("| \\");
+            System.out.println("|  \\");
+            System.out.println("|   \\");
+            System.out.println("|____\\");
+        } else {
+            System.out.println("Прямоугольного треугольника с указанными длинами сторон не существует");
+        }
+        System.out.println();
 
+        // 10. Подсчет количества банкнот
+        System.out.println("10. Подсчет количества банкнот");
+        int sum = 567;
+        int amountOfBanknote50 = sum / 50;
+        int amountOfBanknote10 = sum % 50 / 10;
+        int amountOfBanknote1 = sum % 50 % 10;
+        int reverseAmount = amountOfBanknote50 * 50 + amountOfBanknote10 * 10 + amountOfBanknote1;
+        System.out.println("Банкноты номиналом 50 - " + amountOfBanknote50);
+        System.out.println("Банкноты номиналом 10 - " + amountOfBanknote10);
+        System.out.println("Банкноты номиналом 1 - " + amountOfBanknote1);
+        System.out.println("Исходная сумма - " + reverseAmount);
     }
 }
