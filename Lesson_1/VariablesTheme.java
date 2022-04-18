@@ -1,7 +1,7 @@
 public class VariablesTheme {
     public static void main(String[] args) {
-        // 1. Создание переменных и вывод их значений на консоль
-        System.out.println("1. Создание переменных и вывод их значений на консоль");
+        // 1. РЎРѕР·РґР°РЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… Рё РІС‹РІРѕРґ РёС… Р·РЅР°С‡РµРЅРёР№ РЅР° РєРѕРЅСЃРѕР»СЊ
+        System.out.println("1. РЎРѕР·РґР°РЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… Рё РІС‹РІРѕРґ РёС… Р·РЅР°С‡РµРЅРёР№ РЅР° РєРѕРЅСЃРѕР»СЊ");
         byte numberOfProcessorCores = 8;
         short ramCapacity = 16;
         int ssdCapacity = 475;
@@ -15,22 +15,22 @@ public class VariablesTheme {
                 numberOfProcessorCores, ramCapacity, ssdCapacity, hhdCapacity, baseProcessorFrequency, maxProcessorFrequency, operatingSystemType, isLaptop);
         System.out.println();
 
-        // 2. Расчет стоимости товара со скидкой
-        System.out.println("2. Расчет стоимости товара со скидкой");
+        // 2. Р Р°СЃС‡РµС‚ СЃС‚РѕРёРјРѕСЃС‚Рё С‚РѕРІР°СЂР° СЃРѕ СЃРєРёРґРєРѕР№
+        System.out.println("2. Р Р°СЃС‡РµС‚ СЃС‚РѕРёРјРѕСЃС‚Рё С‚РѕРІР°СЂР° СЃРѕ СЃРєРёРґРєРѕР№");
         int priceOfProductX = 100;
         int priceOfProductY = 200;
         int discount = 11;
-        System.out.println("Cумма скидки: " + (priceOfProductX + priceOfProductY) * discount / 100);
-        System.out.println("Общая стоимость товаров со скидкой: " + (priceOfProductX + priceOfProductY - ((priceOfProductX + priceOfProductY) * discount / 100)));
+        System.out.println("CСѓРјРјР° СЃРєРёРґРєРё: " + (priceOfProductX + priceOfProductY) * discount / 100);
+        System.out.println("РћР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ С‚РѕРІР°СЂРѕРІ СЃРѕ СЃРєРёРґРєРѕР№: " + (priceOfProductX + priceOfProductY - ((priceOfProductX + priceOfProductY) * discount / 100)));
         System.out.println();
 
-        // 3. Вывод на консоль слова JAVA
-        System.out.println("3. Вывод на консоль слова JAVA");
+        // 3. Р’С‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ СЃР»РѕРІР° JAVA
+        System.out.println("3. Р’С‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ СЃР»РѕРІР° JAVA");
         System.out.println("   J    a  v     v  a    \r\n   J   a a  v   v  a a   \r\nJ  J  aaaaa  V V  aaaaa  \r\n JJ  a     a  V  a     a ");
         System.out.println();
 
-        // 4. Отображение min и max значений числовых типов данных
-        System.out.println("4. Отображение min и max значений числовых типов данных");
+        // 4. РћС‚РѕР±СЂР°Р¶РµРЅРёРµ min Рё max Р·РЅР°С‡РµРЅРёР№ С‡РёСЃР»РѕРІС‹С… С‚РёРїРѕРІ РґР°РЅРЅС‹С…
+        System.out.println("4. РћС‚РѕР±СЂР°Р¶РµРЅРёРµ min Рё max Р·РЅР°С‡РµРЅРёР№ С‡РёСЃР»РѕРІС‹С… С‚РёРїРѕРІ РґР°РЅРЅС‹С…");
         byte byteMaxValue = 127;
         short shortMaxValue = 32_767;
         int intMaxValue = 2_147_483_647;
@@ -40,18 +40,18 @@ public class VariablesTheme {
         shortMaxValue++;
         intMaxValue++;
         longMaxValue++;
-        System.out.println("Инкрементируем все переменные:");
+        System.out.println("РРЅРєСЂРµРјРµРЅС‚РёСЂСѓРµРј РІСЃРµ РїРµСЂРµРјРµРЅРЅС‹Рµ:");
         System.out.println(byteMaxValue + " " + shortMaxValue + " " + intMaxValue + " " + longMaxValue);
         byteMaxValue--;
         shortMaxValue--;
         intMaxValue--;
         longMaxValue--;
-        System.out.println("Декрементируем все переменные:");
+        System.out.println("Р”РµРєСЂРµРјРµРЅС‚РёСЂСѓРµРј РІСЃРµ РїРµСЂРµРјРµРЅРЅС‹Рµ:");
         System.out.println(byteMaxValue + " " + shortMaxValue + " " + intMaxValue + " " + longMaxValue);
         System.out.println();
 
-        // 5. Перестановка значений переменных
-        System.out.println("5. Перестановка значений переменных");
+        // 5. РџРµСЂРµСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С…
+        System.out.println("5. РџРµСЂРµСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёР№ РїРµСЂРµРјРµРЅРЅС‹С…");
         int number1 = 5;
         int number2 = 10;
         System.out.println(number1 + " " + number2);
@@ -61,8 +61,8 @@ public class VariablesTheme {
         System.out.println(number1 + " " + number2);
         System.out.println();
 
-        // 6. Вывод символов и их кодов
-        System.out.println("6. Вывод символов и их кодов");
+        // 6. Р’С‹РІРѕРґ СЃРёРјРІРѕР»РѕРІ Рё РёС… РєРѕРґРѕРІ
+        System.out.println("6. Р’С‹РІРѕРґ СЃРёРјРІРѕР»РѕРІ Рё РёС… РєРѕРґРѕРІ");
         int n1 = 35;
         int n2 = 38;
         int n3 = 64;
@@ -72,8 +72,8 @@ public class VariablesTheme {
                 n3 + " - " + (char) n3 + "\r\n" + n4 + " - " + (char) n4 + "\r\n" + n5 + " - " + (char) n5);
         System.out.println();
 
-        // 7. Произведение и сумма цифр числа
-        System.out.println("7. Произведение и сумма цифр числа");
+        // 7. РџСЂРѕРёР·РІРµРґРµРЅРёРµ Рё СЃСѓРјРјР° С†РёС„СЂ С‡РёСЃР»Р°
+        System.out.println("7. РџСЂРѕРёР·РІРµРґРµРЅРёРµ Рё СЃСѓРјРјР° С†РёС„СЂ С‡РёСЃР»Р°");
         int num1 = 345;
         int digit3 = num1 % 10;
         int digit2 = num1 / 10 % 10;
@@ -83,8 +83,8 @@ public class VariablesTheme {
         System.out.println("Product: " + product + "\r\n" + "Sum: " + sum);
         System.out.println();
 
-        // 8. Вывод на консоль ASCII-арт Дюка
-        System.out.println("8. Вывод на консоль ASCII-арт Дюка");
+        // 8. Р’С‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ ASCII-Р°СЂС‚ Р”СЋРєР°
+        System.out.println("8. Р’С‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ ASCII-Р°СЂС‚ Р”СЋРєР°");
         char space = ' ';
         char underline = '_';
         char slash = '/';
@@ -98,19 +98,19 @@ public class VariablesTheme {
         System.out.println("" + slash + underline + underline + underline + underline + slash + backslash + underline + underline + backslash);
         System.out.println();
 
-        // 9. Отображение количества сотен, десятков и единиц числа
-        System.out.println("9. Отображение количества сотен, десятков и единиц числа");
+        // 9. РћС‚РѕР±СЂР°Р¶РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЃРѕС‚РµРЅ, РґРµСЃСЏС‚РєРѕРІ Рё РµРґРёРЅРёС† С‡РёСЃР»Р°
+        System.out.println("9. РћС‚РѕР±СЂР°Р¶РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЃРѕС‚РµРЅ, РґРµСЃСЏС‚РєРѕРІ Рё РµРґРёРЅРёС† С‡РёСЃР»Р°");
         int num2 = 123;
         int digit3OfNum2 = num2 % 10;
         int digit2OfNum2 = num2 / 10 % 10;
         int digit1OfNum2 = num2/ 100 % 10;
-        System.out.println(digit1OfNum2 + " - количество сотен");
-        System.out.println(digit2OfNum2 + " - количество десятков");
-        System.out.println(digit3OfNum2 + " - количество единиц");
+        System.out.println(digit1OfNum2 + " - РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕС‚РµРЅ");
+        System.out.println(digit2OfNum2 + " - РєРѕР»РёС‡РµСЃС‚РІРѕ РґРµСЃСЏС‚РєРѕРІ");
+        System.out.println(digit3OfNum2 + " - РєРѕР»РёС‡РµСЃС‚РІРѕ РµРґРёРЅРёС†");
         System.out.println();
 
-        // 10. Преобразование секунд
-        System.out.println("10. Преобразование секунд");
+        // 10. РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃРµРєСѓРЅРґ
+        System.out.println("10. РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃРµРєСѓРЅРґ");
         int time = 86399;
         int hours = time / 3600;
         int minutes = time % 3600 / 60;
