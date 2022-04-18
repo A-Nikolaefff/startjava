@@ -6,14 +6,14 @@ public class MyFirstGame {
         int attempt = (bottomLimit + upperLimit) / 2;
         while (attempt != answer) {
             if (attempt < answer) {
-                System.out.println("×èñëî " + attempt + " ìåíüøå òîãî, ÷òî çàãàäàë êîìïüþòåð");
+                System.out.println("Ð§Ð¸ÑÐ»Ð¾ " + attempt + " Ð¼ÐµÐ½ÑŒÑˆÐµ Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾ Ð·Ð°Ð³Ð°Ð´Ð°Ð» ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€");
                 bottomLimit = attempt;
             } else {
-                System.out.println("×èñëî " + attempt + " áîëüøå òîãî, ÷òî çàãàäàë êîìïüþòåð");
+                System.out.println("Ð§Ð¸ÑÐ»Ð¾ " + attempt + " Ð±Ð¾Ð»ÑŒÑˆÐµ Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾ Ð·Ð°Ð³Ð°Ð´Ð°Ð» ÐºÐ¾Ð¼Ð¿ÑŒÑŽÑ‚ÐµÑ€");
                 upperLimit = attempt;
             }
             attempt = (bottomLimit + upperLimit) / 2;
         }
-        System.out.println("Âû ïîáåäèëè!");
+        System.out.println("Ð’Ñ‹ Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»Ð¸!");
     }
 }
