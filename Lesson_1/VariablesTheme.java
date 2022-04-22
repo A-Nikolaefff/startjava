@@ -10,9 +10,7 @@ public class VariablesTheme {
         double maxCpuFrequency = 4.1;
         char osType = 'W';
         boolean isLaptop = false;
-        System.out.printf("Number of CPU cores = %d;\nRAM capacity = %d Gb;\nSSD capacity = %d Gb;\nHHD capacity = %d Gb;\n" +
-                "Base CPU frequency = %.2f Ghz;\nMax CPU frequency = %.2f Ghz;\nOS type = %c;\nIs laptop = %b;\n",
-                numberOfCpuCores, ramCapacity, ssdCapacity, hhdCapacity, baseCpuFrequency, maxCpuFrequency, osType, isLaptop);
+        System.out.printf("Number of CPU cores = %d;\nRAM capacity = %d Gb;\nSSD capacity = %d Gb;\nHHD capacity = %d Gb;\nBase CPU frequency = %.2f Ghz;\nMax CPU frequency = %.2f Ghz;\nOS type = %c;\nIs laptop = %b;\n", numberOfCpuCores, ramCapacity, ssdCapacity, hhdCapacity, baseCpuFrequency, maxCpuFrequency, osType, isLaptop);
 
         // 2. Расчет стоимости товара со скидкой
         System.out.println("\n2. Расчет стоимости товара со скидкой");
@@ -56,8 +54,7 @@ public class VariablesTheme {
         int codeChar3 = 64;
         int codeChar4 = 94;
         int codeChar5 = 95;
-        System.out.println(codeChar1 + " - " + (char) codeChar1 + "\n" + codeChar2 + " - " + (char) codeChar2 + "\n" +
-                codeChar3 + " - " + (char) codeChar3 + "\n" + codeChar4 + " - " + (char) codeChar4 + "\n" + codeChar5 + " - " + (char) codeChar5);
+        System.out.println(codeChar1 + " - " + (char) codeChar1 + "\n" + codeChar2 + " - " + (char) codeChar2 + "\n" + codeChar3 + " - " + (char) codeChar3 + "\n" + codeChar4 + " - " + (char) codeChar4 + "\n" + codeChar5 + " - " + (char) codeChar5);
 
         // 7. Произведение и сумма цифр числа
         System.out.println("\n7. Произведение и сумма цифр числа");

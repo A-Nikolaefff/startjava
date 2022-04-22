@@ -3,18 +3,22 @@ public class IfElseStatementTheme {
         // 1. Перевод псевдокода на язык Java
         System.out.println("1. Перевод псевдокода на язык Java");
         int age = 26;
-        int height = 165;
-        boolean male = false;
-        String name = "Anastasia";
         if (age > 20) {
             System.out.println("Возраст больше 20");
         } else {
             System.out.println("Возраст меньше или равен 20");
         }
-
+        boolean male = false;
         if (!male) {
             System.out.println("Пол женский");
         }
+        int height = 165;
+        if (height < 180) {
+            System.out.println("Рост меньше 180см");
+        } else {
+            System.out.println("Рост больше или равен 180см");
+        }
+        String name = "Anastasia";
         char firstLetterOfName = name.charAt(0);
         if (firstLetterOfName == 'M') {
             System.out.println("Имя начинается с буквы M");
@@ -127,37 +131,31 @@ public class IfElseStatementTheme {
         }
         int averageGrade = (gradeInHistory + gradeInProgramming) / 2;
         int averagePercent = (percentInHistory + percentInProgramming) / 2;
-        System.out.println("Оценка по истории: " + gradeInHistory + "\nОценка по программированию: " + gradeInProgramming + 
-            "\nСредний балл оценок по всем предметам: " + averageGrade + "\nСредний процент по всем предметам: " + averagePercent);
+        System.out.println("Оценка по истории: " + gradeInHistory + "\nОценка по программированию: " + gradeInProgramming + "\nСредний балл оценок по всем предметам: " + averageGrade + "\nСредний процент по всем предметам: " + averagePercent);
 
         // 8. Расчет прибыли
         System.out.println("\n8. Расчет прибыли");
         int monthlyRent = 5000;
         int monthlyIncome = 15000;
         int monthlyExpense = 9000;
-        int annualProfit = 12 * (monthlyIncome - monthlyExpense - monthlyRent);
+        int annualProfit = (monthlyIncome - monthlyExpense - monthlyRent) * 12;
         if (annualProfit > 0) {
             System.out.println("Прибыль за год: +" + annualProfit + "руб.");
-        }
-        else {
+        } else {
             System.out.println("Прибыль за год: " + annualProfit + "руб.");
         }
 
         // 9. Определение существования треугольника
         System.out.println("\n9. Определение существования треугольника");
-        // Фигуры "треугольник" и "прямоугольный треугольник" имеют разные условия существования, у прямогольного они более жесткие (соответствие теореме Пифагора).
-        // Судя по тексту задачи, речь идет о определении существования именно прямогоугольного треугольника, хотя и в тексте задачи это явно не отражено.
         int a = 3;
         int b = 4;
         int c = 5;
-        int hypotenuse;
-        int cathetus1;
-        int cathetus2;
+        int hypotenuse = a;
+        int cathetus1 = b;
+        int cathetus2 = c;
         if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
             if (a * a == b * b + c * c) {
-                hypotenuse = a;
-                cathetus1 = b;
-                cathetus2 = c;
+                // переприсваивания не требуются
             } else if (b * b == a * a + c * c) {
                 hypotenuse = b;
                 cathetus1 = a;
@@ -168,8 +166,7 @@ public class IfElseStatementTheme {
                 cathetus2 = b;
             }
             int area = (cathetus1 * cathetus2) / 2;
-            System.out.println("Гипотенуза: " + hypotenuse + "\nКатет №1: " + cathetus1 + "\nКатет №2: " + cathetus2 + "\nПлощаль: " + area +
-                "\n|\\\n| \\\n|  \\\n|___\\");
+            System.out.println("Гипотенуза: " + hypotenuse + "\nКатет №1: " + cathetus1 + "\nКатет №2: " + cathetus2 + "\nПлощадь: " + area + "\n|\\\n| \\\n|  \\\n|___\\");
         } else {
             System.out.println("Прямоугольного треугольника с указанными длинами сторон не существует");
         }
@@ -181,7 +178,6 @@ public class IfElseStatementTheme {
         int amountOfBanknote10 = sum % 50 / 10;
         int amountOfBanknote1 = sum % 50 % 10;
         int reverseAmount = amountOfBanknote50 * 50 + amountOfBanknote10 * 10 + amountOfBanknote1;
-        System.out.println("Банкноты номиналом 50 - " + amountOfBanknote50 + "\nБанкноты номиналом 10 - " + 
-            amountOfBanknote10 + "\nБанкноты номиналом 1 - " + amountOfBanknote1 +"\nИсходная сумма - " + reverseAmount);
+        System.out.println("Банкноты номиналом 50 - " + amountOfBanknote50 + "\nБанкноты номиналом 10 - " + amountOfBanknote10 + "\nБанкноты номиналом 1 - " + amountOfBanknote1 +"\nИсходная сумма - " + reverseAmount);
     }
 }
