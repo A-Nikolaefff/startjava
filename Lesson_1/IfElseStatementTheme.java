@@ -153,17 +153,15 @@ public class IfElseStatementTheme {
         int hypotenuse = a;
         int cathetus1 = b;
         int cathetus2 = c;
-        if ((a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b)) {
+        if (a + b > c || a + c > b || b + c > a) {
             if (a * a == b * b + c * c) {
                 // переприсваивания не требуются
             } else if (b * b == a * a + c * c) {
                 hypotenuse = b;
                 cathetus1 = a;
-                cathetus2 = c;
             } else {
                 hypotenuse = c;
-                cathetus1 = a;
-                cathetus2 = b;
+                cathetus2 = a;
             }
             int area = (cathetus1 * cathetus2) / 2;
             System.out.println("Гипотенуза: " + hypotenuse + "\nКатет №1: " + cathetus1 + "\nКатет №2: " + cathetus2 + "\nПлощадь: " + area + "\n|\\\n| \\\n|  \\\n|___\\");
@@ -176,7 +174,7 @@ public class IfElseStatementTheme {
         int sum = 567;
         int amountOfBanknote50 = sum / 50;
         int amountOfBanknote10 = sum % 50 / 10;
-        int amountOfBanknote1 = sum % 50 % 10;
+        int amountOfBanknote1 = sum % 50;
         int reverseAmount = amountOfBanknote50 * 50 + amountOfBanknote10 * 10 + amountOfBanknote1;
         System.out.println("Банкноты номиналом 50 - " + amountOfBanknote50 + "\nБанкноты номиналом 10 - " + amountOfBanknote10 + "\nБанкноты номиналом 1 - " + amountOfBanknote1 +"\nИсходная сумма - " + reverseAmount);
     }
