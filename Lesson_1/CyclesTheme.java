@@ -22,9 +22,7 @@ public class CyclesTheme {
         int number3 = -1;
         int max = number1;
         if (number1 > number2) {
-            if (number1 > number3) {
-                // переприсваивание не требуется
-            } else {
+            if (number3 > number1) {
                 max = number3;
             }
         } else {
@@ -36,9 +34,7 @@ public class CyclesTheme {
         }
         int min = number2;
         if (max == number1) {
-            if (number2 < number3) {
-                // переприсваивание не требуется
-            } else {
+            if (number3 < number2) {
                 min = number3;
             } 
         } else if (max == number2) {
@@ -50,8 +46,6 @@ public class CyclesTheme {
         } else {
             if (number1 < number2) {
                 min = number1;
-            } else {
-                // переприсваивание не требуется
             } 
         }
         for (i = max - 1; i > min; i--) {
@@ -73,31 +67,45 @@ public class CyclesTheme {
         }
         System.out.println("Реверсивное число: " + reverseNumber + "\nCумма цифр числа: " + sumOfDigits);
 
-        // 4. Вывод чисел на консоль в несколько строк
-        System.out.println("\n4. Вывод чисел на консоль в несколько строк");
-        for (i = 1; i * 2 - 1 < 24; i ++) {
-            System.out.printf("%-2d  ", i * 2 - 1);
-            // Условие перехода на новую строку 
-            if (i % 5 == 0) {
+        // 4. Вывод чисел на консоль в несколько строк (вариант решения №1)
+        System.out.println("\n4. Вывод чисел на консоль в несколько строк (вариант решения №1)");
+        int zeroUnits = 5;
+        for (i = 1; i <= 23; i += 2) {
+            System.out.printf("%-2d ", i);
+            zeroUnits--;
+            if ((i + 1) % 10 == 0) {
                 System.out.println();
+                zeroUnits = 5;
             }
         }
-        // Заполнение остатка последней строки нулями
-        int numberUnits = (i - 1) % 5;
-        if (numberUnits != 0) {
-            int zeroUnits = 5 - numberUnits;
+        if (zeroUnits != 5) {
             for (int j = 1; j <= zeroUnits; j++) {
-                System.out.print(0);
-                if (j != zeroUnits) {
-                System.out.print("   ");
+                System.out.printf("%-2d ", 0);
+            }
+        }
+
+        // 4. Вывод чисел на консоль в несколько строк (вариант решения №2)
+        System.out.println("\n\n4. Вывод чисел на консоль в несколько строк (вариант решения №2)");
+        int startRange = 1;
+        int endRange = 23;
+        String zeroLine = "0 0 0 0 0";
+        String lastLine = zeroLine;
+        for (i = startRange; i <= endRange; i += 2) {
+            lastLine = lastLine.replaceFirst("0", String.format("%-2d",  i));
+            // Условие перехода на новую строку
+            if ((i + 1) % 10 == 0 || i >= endRange - 1) {
+                if (i >= endRange - 1) {
+                    lastLine = lastLine.replaceAll("0", String.format("%-2d",  0));
                 }
+                System.out.println(lastLine);
+                lastLine = zeroLine;
             }
         }
 
         // 5. Проверка количества единиц на четность
-        System.out.println("\n\n5. Проверка количества единиц на четность");
+        System.out.println("\n5. Проверка количества единиц на четность");
         srcNumber = 3141591;
-        numberUnits = 0;
+        int numberUnits = 0;
         while (srcNumber > 0) {
             if (srcNumber % 10 == 1) {
                  numberUnits++;

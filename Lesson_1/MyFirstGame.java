@@ -1,19 +1,19 @@
 public class MyFirstGame {
     public static void main(String[] args) {
-        int answer = 67;
-        int bottomLimit = 1;
-        int upperLimit = 100;
-        int attempt = (bottomLimit + upperLimit) / 2;
-        while (attempt != answer) {
-            if (attempt < answer) {
+        int targetNumber = 67;
+        int startRange = 1;
+        int endRange = 100;
+        int attempt = (startRange + endRange) / 2;
+        while (attempt != targetNumber) {
+            if (attempt < targetNumber) {
                 System.out.println("Число " + attempt + " меньше того, что загадал компьютер");
-                bottomLimit = attempt;
+                startRange = attempt;
             } else {
                 System.out.println("Число " + attempt + " больше того, что загадал компьютер");
-                upperLimit = attempt;
+                endRange = attempt;
             }
-            attempt = (bottomLimit + upperLimit) / 2;
+            attempt = (startRange + endRange) / 2;
         }
-        System.out.println(attempt + " - Это верный ответ! Вы победили!");
+        System.out.println(attempt + " - 'это верный ответ! Вы победили!");
     }
 }
