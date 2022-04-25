@@ -67,38 +67,20 @@ public class CyclesTheme {
         }
         System.out.println("Реверсивное число: " + reverseNumber + "\nCумма цифр числа: " + sumOfDigits);
 
-        // 4. Вывод чисел на консоль в несколько строк (вариант решения №1)
-        System.out.println("\n4. Вывод чисел на консоль в несколько строк (вариант решения №1)");
-        int zeroUnits = 5;
-        for (i = 1; i <= 23; i += 2) {
-            System.out.printf("%-2d ", i);
-            zeroUnits--;
-            if ((i + 1) % 10 == 0) {
+        // 4. Вывод чисел на консоль в несколько строк
+        System.out.println("\n4. Вывод чисел на консоль в несколько строк");
+        int count = 0;
+        for (i = 1; i <= 19; i += 2) {
+            System.out.printf("%2d ", i);
+            count++;
+            if (count == 5) {
                 System.out.println();
-                zeroUnits = 5;
+                count = 0;
             }
         }
-        if (zeroUnits != 5) {
-            for (int j = 1; j <= zeroUnits; j++) {
-                System.out.printf("%-2d ", 0);
-            }
-        }
-
-        // 4. Вывод чисел на консоль в несколько строк (вариант решения №2)
-        System.out.println("\n\n4. Вывод чисел на консоль в несколько строк (вариант решения №2)");
-        int startRange = 1;
-        int endRange = 23;
-        String zeroLine = "0 0 0 0 0";
-        String lastLine = zeroLine;
-        for (i = startRange; i <= endRange; i += 2) {
-            lastLine = lastLine.replaceFirst("0", String.format("%-2d",  i));
-            // Условие перехода на новую строку
-            if ((i + 1) % 10 == 0 || i >= endRange - 1) {
-                if (i >= endRange - 1) {
-                    lastLine = lastLine.replaceAll("0", String.format("%-2d",  0));
-                }
-                System.out.println(lastLine);
-                lastLine = zeroLine;
+        if (count != 0) {
+            for (int j = 5; j > count; j--) {
+            System.out.printf("%2d ", 0);
             }
         }
 
@@ -187,7 +169,7 @@ public class CyclesTheme {
         temp = srcNumber;
         int sumOfFirstDigits = 0;
         int sumOfSecondtDigits = 0;
-        int count = 0;
+        count = 0;
         while (temp > 0) {
             digit = temp % 10;
             if (count < 3) {
