@@ -86,9 +86,11 @@ public class Jaeger {
     public void move() {
         System.out.println(modelName + " двигается со скоростью " + speed);
     }
+
     public void defend() {
         System.out.println(modelName + " защищается с броней " + armor);
     }
+    
     public void attack() {
         System.out.println(modelName + " атакует с силой " + strength);
     }
