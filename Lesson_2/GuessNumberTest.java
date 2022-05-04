@@ -16,16 +16,20 @@ public class GuessNumberTest {
     }
 
     private static boolean isNext() {
-        while (true) {
+        String answer;
+        do {
             System.out.print("Хотите продолжить игру? [yes/no]: ");
-            String answer = scanner.nextLine();
-            if (answer.equals("no")) {
-                return false;
-            } else if (answer.equals("yes")) {
-                return true;
+            answer = scanner.nextLine();
+            if (answer.equals("no") || answer.equals("yes")) {
+                break;
             } else {
             System.out.println("Вы ввели неверный ответ.");
             }
-        }
+        } while (!(answer.equals("no") || answer.equals("yes")));
+        if (answer.equals("no")) {
+            return false;
+        } else {
+            return true;
+        } 
     }
 }
