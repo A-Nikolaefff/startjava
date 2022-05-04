@@ -22,14 +22,9 @@ public class GuessNumberTest {
             answer = scanner.nextLine();
             if (answer.equals("no") || answer.equals("yes")) {
                 break;
-            } else {
+            } 
             System.out.println("Вы ввели неверный ответ.");
-            }
-        } while (!(answer.equals("no") || answer.equals("yes")));
-        if (answer.equals("no")) {
-            return false;
-        } else {
-            return true;
-        } 
+        } while (!answer.equals("no") && !answer.equals("yes"));
+        return answer.equals("yes");
     }
 }
