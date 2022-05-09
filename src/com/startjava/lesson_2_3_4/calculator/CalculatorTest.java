@@ -9,13 +9,20 @@ public class CalculatorTest {
         do {
             System.out.print("Введите математическое выражение: ");
             String expression;
-            int result;
-            // При возникновении ошибки метод calculate() вернет значение меньше нуля
+            int result = 0;
+            boolean isError;
             do {
+                isError = false;
                 expression = scanner.nextLine();
-                result = Calculator.calculate(expression);
-            } while (result < 0);
-            System.out.println(expression + " = " + Calculator.calculate(expression));
+                try {
+                    result = Calculator.calculate(expression);
+                } catch (ArithmeticException e) {
+                    System.out.print(e.getMessage());
+                    System.out.print(" Введите корректное выражение: ");
+                    isError = true;
+                }
+            } while (isError);
+            System.out.println(expression + " = " + result);
         } while (isNext());
     }
 
