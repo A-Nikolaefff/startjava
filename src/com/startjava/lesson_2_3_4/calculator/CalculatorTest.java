@@ -17,8 +17,7 @@ public class CalculatorTest {
                 try {
                     result = Calculator.calculate(expression);
                 } catch (ArithmeticException e) {
-                    System.out.print(e.getMessage());
-                    System.out.print(" Введите корректное выражение: ");
+                    System.out.print("Введите корректное выражение: ");
                     isError = true;
                 }
             } while (isError);
