@@ -1,20 +1,27 @@
 package com.startjava.lesson_2_3_4.guess;
+
 import java.util.Scanner;
 
 public class GuessNumberTest {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Игра состоит из трех игровых сессий. В каждой сессии у каждого игрока есть только 10 попыток.");
+        System.out.println("Игра состоит из трех игровых сессий" +
+                "В каждой сессии у каждого игрока есть только 10 попыток.");
+        Player[] players = createPlayers();
+        GuessNumber guessNumber = new GuessNumber(players);
+        do {
+            guessNumber.play();
+        } while (isNext());
+    }
+
+    private static Player[] createPlayers() {
         Player[] players = new Player[3];
         for (int i = 0; i < players.length; i++) {
             System.out.print("Введите имя игрока №" + (i + 1) + ": ");
             players[i] = new Player(scanner.nextLine());
         }
-        GuessNumber guessNumber = new GuessNumber(players);
-        do {
-            guessNumber.play();
-        } while (isNext());
+        return players;
     }
 
     private static boolean isNext() {

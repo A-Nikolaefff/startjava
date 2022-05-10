@@ -1,9 +1,10 @@
 package com.startjava.lesson_2_3_4.guess;
+
 import java.util.Arrays;
 
 public class Player {
     private String name;
-    private int attempt;
+    // private int attempt;
     private int[] attempts = new int[10];
     private int countOfAttempts = 0;
     private int countOfWins = 0;
@@ -16,12 +17,15 @@ public class Player {
         return name;
     }
 
-    public int getAttempt() {
-        return attempt;
+    public int[] getAttempts() {
+        return attempts;
     }
 
-    public void setAttempt(int attempt) {
-        this.attempt = attempt;
+    public int getLastAttempt() {
+        return attempts[countOfAttempts - 1];
+    }
+
+    public void addAttempt(int attempt) {
         if (attempt > 0 && attempt <= 100) {
             attempts[countOfAttempts] = attempt;
             countOfAttempts++;
@@ -37,11 +41,7 @@ public class Player {
     }
 
     public void incrementCountOfWins() {
-        this.countOfWins = ++countOfWins;
-    }
-
-    public void printAttempts() {
-        System.out.println("Попытки игрока " + getName() + ": " + Arrays.toString(Arrays.copyOf(attempts, countOfAttempts)).replaceAll("[\\[\\]]", ""));
+        countOfWins++;
     }
 
     public void clearAttempts() {
