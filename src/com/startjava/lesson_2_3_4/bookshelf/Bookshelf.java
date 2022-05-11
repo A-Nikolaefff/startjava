@@ -4,71 +4,72 @@ public class Bookshelf {
     private int amountOfBooks = 0;
     private Book[] books = new Book[10];
 
-    public void add(String author, String title, int publishYear) {
-        Book book = new Book(author, title, publishYear);
+    public boolean add(String bookInfo) {
+        String[] partsBookInfo = bookInfo.replaceAll("[\\<\\>]", "").trim().split(" ");
+        Book book = new Book(partsBookInfo[0], partsBookInfo[1], Integer.parseInt(partsBookInfo[2]));
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 books[i] = book;
-                System.out.println("The book has been added.");
                 amountOfBooks++;
-                view();
-                return;
+                return true;
             }
         }
-        System.out.println("Adding a book is not possible because there is no free space on the bookshelf.");
+        return false;
     }
 
-    public void delete(String title) {
+    public boolean delete(String title) {
+        title = title.trim().replaceAll("[\\<\\>]", "");
         for (int i = 0; i < books.length; i++) {
             if (books[i] != null) {
                 if (books[i].getTitle().equals(title)) {
                     books[i] = null;
-                    System.out.println("The book has been deleted.");
-                    view();
-                    return;
+                    amountOfBooks--;
+                    return true;
                 }
             }
         }
-        System.out.println("A book with that title is not on the bookshelf.");
+        return false;
     }
 
-    public void find(String title) {
-        for (Book b : books) {
-            if (b.getTitle().equals(title)) {
-                System.out.println("Author: " + b.getAuthor() + "\nTitle: " + b.getTitle() + "\nYear: " + b.getPublishYear());
-                view();
-                return;
-            }
-        }
-        System.out.println("A book with that title is not on the bookshelf.");
-    }
-
-    public void getAmountOfBooks() {
-        System.out.println("The amount of books: " + amountOfBooks);
-        view();
-    }
-
-    public void getFreeSpace() {
-        System.out.println("Free space: " + (books.length - amountOfBooks));
-        view();
-    }
-
-    public void view() {
+    public String find(String title) {
+        title = title.trim().replaceAll("[\\<\\>]", "");
         for (Book b : books) {
             if (b != null) {
-                System.out.println(b.getFullName());
-            } else {
-                System.out.println("<" + " ".repeat(findMaxBookNameLength() - 2) + ">");
+                if (b.getTitle().equals(title)) {
+                    return b.toString();
+                }
             }
         }
+        return null;
+    }
+
+    public int getAmountBooks() {
+        return amountOfBooks;
+    }
+
+    public int getFreeSpace() {
+        return books.length - amountOfBooks;
+    }
+
+    public String viewShelf() {
+        int maxBookNameLength = findMaxBookNameLength();
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Book b : books) {
+            if (b != null) {
+                stringBuilder.append("<").append(b).append(">\n");
+            } else {
+                stringBuilder.append("<").append(" ".repeat(maxBookNameLength)).append(">\n");
+            }
+        }
+        return stringBuilder.toString();
     }
 
     private int findMaxBookNameLength() {
         // Значение длины пустого места по умолчанию при выводе в консоль
         int maxBookNameLength = 20;
         for (Book b : books) {
-            if (b != null && b.getFullName().length() > maxBookNameLength) {
-                maxBookNameLength = b.getFullName().length();
+            if (b != null && b.toString().length() > maxBookNameLength) {
+                maxBookNameLength = b.toString().length();
             }
         }
         return maxBookNameLength;

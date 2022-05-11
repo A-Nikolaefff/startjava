@@ -11,19 +11,12 @@ public class Book {
         this.publishYear = publishYear;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
     public String getTitle() {
         return title;
     }
 
-    public int getPublishYear() {
-        return publishYear;
-    }
-
-    public String getFullName() {
-        return "<" + getAuthor() + ", " + getTitle() + ", " + getPublishYear() + ">";
+    @Override
+    public String toString() {
+        return author + ", " + title + ", " + publishYear;
     }
 }
