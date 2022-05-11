@@ -54,7 +54,8 @@ public class GuessNumber {
                     System.out.println("Игрок " + player.getName() + " победил в текущей игровой сессии!");
                     player.incrementCountOfWins();
                     return;
-                } else if (player.getCountOfAttempts() == 10) {
+                }
+                if (player.getCountOfAttempts() == 10) {
                     numberOfActivePlayers--;
                     System.out.println("У игрока " + player.getName() + " закончились попытки.");
                 }
